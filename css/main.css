@@ -1,29 +1,29 @@
 .primary {
-  background: #2ecc71;
-  border: 2px solid #2ecc71;
+  background: #C0A080;
+  border: 2px solid #C0A080;
 }
 .primary:hover {
   background: #fff;
-  border: 2px solid #2ecc71;
-  color: #2ecc71;
+  border: 2px solid #C0A080;
+  color: #C0A080;
 }
 
 .secondary {
-  background: #3498db;
-  border: 2px solid #3498db;
+  background: #182747;
+  border: 2px solid #182747;
 }
 .secondary:hover {
   background: #fff;
-  border: 2px solid #3498db;
-  color: #3498db;
+  border: 2px solid #182747;
+  color: #182747;
 }
 
 .primaryColor {
-  color: #2ecc71;
+  color: #C0A080;
 }
 
 .secondaryColor {
-  color: #3498db;
+  color: #182747;
 }
 
 ::-webkit-scrollbar {
@@ -31,7 +31,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2ecc71;
+  background: #C0A080;
 }
 
 ::-webkit-scrollbar-track {
@@ -49,12 +49,12 @@
 }
 
 ::-moz-selection {
-  background-color: #2ecc71;
+  background-color: #C0A080;
   color: #fff;
 }
 
 ::selection {
-  background-color: #2ecc71;
+  background-color: #C0A080;
   color: #fff;
 }
 
@@ -82,14 +82,14 @@ select {
 input:focus,
 select:focus {
   box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6509803922) !important;
-  border-color: #2ecc71 !important;
+  border-color: #C0A080 !important;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2ecc71;
+  background-color: #C0A080;
   color: #fff;
   padding: 1rem;
   font-size: 1.2rem;
@@ -146,7 +146,7 @@ nav .burger div {
     left: -100%;
     transform: translateX(-100%);
     transition: all 0.5s ease;
-    background-color: #2ecc71;
+    background-color: #C0A080;
     margin: 0;
     padding: 0;
   }
@@ -244,5 +244,5 @@ nav .toggle .line3 {
 }
 #footer ul a:hover {
   opacity: 1;
-  color: #2ecc71;
+  color: #C0A080;
 }/*# sourceMappingURL=main.css.map */
