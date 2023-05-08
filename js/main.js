@@ -64,28 +64,18 @@ $(document).ready(function () {
     { country: "Tunisia", flag: "./img/tunisia.png" },
   ];
 
-  function completeFunction(
-    autocompleteContainer,
-    selectTextInput,
-    items,
-    flag
-  ) {
+  function completeFunction(autocompleteContainer, selectTextInput, items, flag) {
     return function () {
       const inputText = $(this).val();
       autocompleteContainer.html("");
       if (inputText.length > 0) {
         items.forEach(function (item) {
           if (flag) {
-            if (
-              item.country.toLowerCase().startsWith(inputText.toLowerCase())
-            ) {
+            if (item.country.toLowerCase().startsWith(inputText.toLowerCase())) {
               const div = $("<div>");
               div.html(`
                 <img src="${item.flag}" class="me-2 flag"/>
-                <strong>${item.country.substr(
-                  0,
-                  inputText.length
-                )}</strong>${item.country.substr(inputText.length)}
+                <strong>${item.country.substr(0, inputText.length)}</strong>${item.country.substr(inputText.length)}
               `);
               div.on("click", function () {
                 selectTextInput.val(item.country);
@@ -97,13 +87,10 @@ $(document).ready(function () {
             if (item.toLowerCase().startsWith(inputText.toLowerCase())) {
               const div = $("<div>");
               div.html(
-                `<strong>${item.substr(
-                  0,
-                  inputText.length
-                )}</strong>${item.substr(inputText.length)}`
+                `<strong>${item.substr(0, inputText.length)}</strong>${item.substr(inputText.length)}`
               );
               div.on("click", function () {
-                selectTextInput.val(item.country);
+                selectTextInput.val(item);
                 autocompleteContainer.html("");
               });
               autocompleteContainer.append(div);
@@ -116,7 +103,7 @@ $(document).ready(function () {
 
   selectTextInput1.on(
     "input",
-    completeFunction(autocompleteContainer1, selectTextInput1, items1)
+    completeFunction(autocompleteContainer1, selectTextInput1, items1, false)
   );
 
   selectTextInput2.on(
