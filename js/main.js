@@ -59,9 +59,9 @@ $(document).ready(function () {
   const autocompleteContainer2 = $("#autocomplete-container2");
   const selectTextInput2 = $("#FormControlInput7");
   const items2 = [
-    { country: "Algeria", flag: "../img/algeria.png" },
-    { country: "Egypt", flag: "../img/egypt.png" },
-    { country: "Tunisia", flag: "../img/tunisia.png" },
+    { country: "Algeria", flag: "./img/algeria.png" },
+    { country: "Egypt", flag: "./img/egypt.png" },
+    { country: "Tunisia", flag: "./img/tunisia.png" },
   ];
 
   function completeFunction(
