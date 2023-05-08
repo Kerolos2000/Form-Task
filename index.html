@@ -18,18 +18,20 @@
 
   <!-- Navbar section -->
   <nav>
-    <div class="logo"><a href="#">Logo</a></div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+    <div class="container d-flex">
+      <div class="logo"><a href="#">Task</a></div>
+      <ul class="nav-links ms-auto">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger ms-auto">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </div>
   </nav>
 
@@ -39,10 +41,10 @@
     <div class="container">
       <form>
         <div class="row py-3">
-          <div class="mb-3 col-md-6">
+          <div class="mb-3 col-md-6 position-relative">
             <label for="FormControlInput1">Destination</label>
             <input type="text" class="form-control" id="FormControlInput1" name="Destination" placeholder="Destination">
-            <div id="autocomplete-container1" class="autocomplete-container"></div>
+            <div id="autocomplete-container1" class="autocomplete-container w-50"></div>
           </div>
 
           <div class="mb-3 col-md-6">
@@ -81,7 +83,7 @@
           <div class="mb-3 col-md-6">
             <label for="FormControlInput1">Nationality</label>
             <input type="text" class="form-control" id="FormControlInput7" name="Nationality" placeholder="Nationality">
-            <div id="autocomplete-container2" class="autocomplete-container"></div>
+            <div id="autocomplete-container2" class="autocomplete-container w-50"></div>
           </div>
 
           <div class="mb-3 col-md-6">
@@ -96,43 +98,43 @@
           </div>
 
           <div class="d-flex justify-content-between flex-wrap">
-            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#exampleModal">More
+            <button type="button" class="btn primary my-1" data-bs-toggle="modal" data-bs-target="#exampleModal">More
               Options</button>
-            <div class="btn btn-dark my-1">Search</div>
+            <div class="btn secondary my-1">Search</div>
           </div>
 
         </div>
       </form>
       <div class="icons">
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-plane"></i>
           <p>Flights</p>
         </div>
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-hotel"></i>
           <p>Hotels</p>
         </div>
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-right-left"></i>
           <p>Transfers</p>
         </div>
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-t"></i>
           <p>Tours</p>
         </div>
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-palette"></i>
           <p>Activity</p>
         </div>
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-handshake"></i>
           <p>Meet & Greet</p>
         </div>
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-briefcase"></i>
           <p>Packages</p>
         </div>
-        <div class="icon">
+        <div class="icon secondary">
           <i class="fa-solid fa-note-sticky"></i>
           <p>Online Request</p>
         </div>
@@ -189,7 +191,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -202,7 +204,7 @@
     <div class="container text-center text-xl-start pt-5 pb-5">
       <div class="row">
         <div class="col-xl-4 left-sec">
-          <h2>form Task</h2>
+          <h2 class="primaryColor">form Task</h2>
           <p class="mt-4 paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsum minima eligendi?
             Consectetur iure numquam minima omnis, ad nihil quos!</p>
           <p class="paragraph">Created By <span>kerolos</span></p>
@@ -210,7 +212,7 @@
         </div>
         <div class="col-xl-2 med-sec">
           <div class="links">
-            <h5 class="fw-bold">Links</h5>
+            <h5 class="fw-bold primaryColor">Links</h5>
             <ul class="lh-lg list-unstyled">
               <a href="#main">
                 <li>Home</li>
@@ -234,7 +236,7 @@
           </div>
         </div>
         <div class="col-xl-2 med-sec">
-          <h5 class="fw-bold">About Us</h5>
+          <h5 class="fw-bold primaryColor">About Us</h5>
           <ul class="lh-lg list-unstyled">
             <a href="index.html">
               <li>Sign In</li>
@@ -254,9 +256,9 @@
           </ul>
         </div>
         <div class="col-xl-4 left-sec">
-          <h5 class="fw-bold">Contact Us</h5>
+          <h5 class="fw-bold primaryColor">Contact Us</h5>
           <p class="mt-4">Get in touch with us via mail phone.We are waiting for your call or message</p>
-          <a href="index.html" class="btn btn-dark rounded-pill mt-2 mb-2 w-100">kerolos1410@gmail.com</a>
+          <a href="index.html" class="btn primary rounded-pill mt-2 mb-2 w-100">kerolos1410@gmail.com</a>
           <ul class="d-flex mt-4 list-unstyled gap-4">
             <a href="index.html"><i class="fa-brands fa-facebook"></i></a>
             <a href="index.html"><i class="fa-brands fa-twitter"></i></a>

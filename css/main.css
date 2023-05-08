@@ -1,11 +1,29 @@
-::-moz-selection {
-  background-color: #000;
-  color: #fff;
+.primary {
+  background: #2ecc71;
+  border: 2px solid #2ecc71;
+}
+.primary:hover {
+  background: #fff;
+  border: 2px solid #2ecc71;
+  color: #2ecc71;
 }
 
-::selection {
-  background-color: #000;
-  color: #fff;
+.secondary {
+  background: #3498db;
+  border: 2px solid #3498db;
+}
+.secondary:hover {
+  background: #fff;
+  border: 2px solid #3498db;
+  color: #3498db;
+}
+
+.primaryColor {
+  color: #2ecc71;
+}
+
+.secondaryColor {
+  color: #3498db;
 }
 
 ::-webkit-scrollbar {
@@ -13,11 +31,31 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background: #2ecc71;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000;
+  background: #ddd;
+}
+
+.secondary,
+.primary {
+  color: #fff;
+  transition: 0.5s;
+}
+.secondary:hover,
+.primary:hover {
+  box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6509803922);
+}
+
+::-moz-selection {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+::selection {
+  background-color: #2ecc71;
+  color: #fff;
 }
 
 body {
@@ -25,29 +63,33 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  background: url("../img/download.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 input,
 select {
-  box-shadow: none !important;
-  border-color: #ddd !important;
-  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.7490196078) !important;
+  box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6509803922);
+  border: none;
+  border-bottom: 2px solid #ddd;
+  transition: 0.3s;
 }
 input:focus,
 select:focus {
-  border-color: #000 !important;
-}
-
-* {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
+  box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6509803922) !important;
+  border-color: #2ecc71 !important;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
+  background-color: #2ecc71;
   color: #fff;
   padding: 1rem;
   font-size: 1.2rem;
@@ -61,10 +103,12 @@ nav .logo a {
 }
 nav .nav-links {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
   width: 50%;
   padding: 0;
   margin: 0;
+  z-index: 99;
 }
 nav .nav-links li {
   list-style: none;
@@ -73,10 +117,16 @@ nav .nav-links li {
 nav .nav-links a {
   color: #fff;
   text-decoration: none;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+nav .nav-links a:hover {
+  opacity: 1;
 }
 nav .burger {
   display: none;
   cursor: pointer;
+  z-index: 99;
 }
 nav .burger div {
   width: 25px;
@@ -96,7 +146,7 @@ nav .burger div {
     left: -100%;
     transform: translateX(-100%);
     transition: all 0.5s ease;
-    background-color: #000;
+    background-color: #2ecc71;
     margin: 0;
     padding: 0;
   }
@@ -106,6 +156,7 @@ nav .burger div {
   nav .nav-links.nav-active {
     left: 0;
     transform: translateX(0%);
+    align-items: flex-start;
   }
   nav .burger {
     display: block;
@@ -121,7 +172,20 @@ nav .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-#form-section .autocomplete-container {
+#form-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+#form-section .container {
+  background: rgba(255, 255, 255, 0.35);
+  padding: 1rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6509803922);
+}
+#form-section .container .autocomplete-container {
   position: absolute;
   z-index: 1;
   border: 1px solid #ddd;
@@ -129,31 +193,30 @@ nav .toggle .line3 {
   overflow-y: auto;
   background-color: #fff;
 }
-#form-section .autocomplete-container > div {
+#form-section .container .autocomplete-container > div {
   padding: 10px;
   cursor: pointer;
+  transition: 0.5s;
 }
-#form-section .autocomplete-container > div > div:hover {
-  background-color: #f1f1f1;
+#form-section .container .autocomplete-container > div:hover {
+  background-color: #ddd;
 }
-#form-section .flag {
+#form-section .container .flag {
   width: 20px;
   height: 15px;
 }
-#form-section .icons {
+#form-section .container .icons {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 @media (max-width: 567px) {
-  #form-section .icons {
+  #form-section .container .icons {
     justify-content: space-around;
   }
 }
-#form-section .icons .icon {
+#form-section .container .icons .icon {
   margin: 0.5rem 0;
-  background-color: #000;
-  color: #fff;
   width: 150px;
   height: 150px;
   display: flex;
@@ -162,14 +225,13 @@ nav .toggle .line3 {
   flex-direction: column;
   transition: 0.5s;
 }
-#form-section .icons .icon:hover {
+#form-section .container .icons .icon:hover {
   background-color: #fff;
-  color: #000;
 }
-#form-section .icons .icon svg {
+#form-section .container .icons .icon svg {
   font-size: 1.5rem;
 }
-#form-section .icons .icon p {
+#form-section .container .icons .icon p {
   margin: 0.5rem 0;
   font-size: 1rem;
 }
@@ -182,4 +244,5 @@ nav .toggle .line3 {
 }
 #footer ul a:hover {
   opacity: 1;
+  color: #2ecc71;
 }/*# sourceMappingURL=main.css.map */
