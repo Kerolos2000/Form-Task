@@ -1,0 +1,185 @@
+::-moz-selection {
+  background-color: #000;
+  color: #fff;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input,
+select {
+  box-shadow: none !important;
+  border-color: #ddd !important;
+  transition: 0.5s;
+}
+input:focus,
+select:focus {
+  border-color: #000 !important;
+}
+
+* {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+nav .logo {
+  font-size: 1.5rem;
+}
+nav .logo a {
+  text-decoration: none;
+  color: #fff;
+}
+nav .nav-links {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+nav .nav-links li {
+  list-style: none;
+  margin-inline: 0.5rem;
+}
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+nav .burger {
+  display: none;
+  cursor: pointer;
+}
+nav .burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  nav .nav-links li {
+    margin: 1rem;
+  }
+  nav .nav-links.nav-active {
+    left: 0;
+    transform: translateX(0%);
+  }
+  nav .burger {
+    display: block;
+  }
+}
+nav .toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+nav .toggle .line2 {
+  opacity: 0;
+}
+nav .toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#form-section .autocomplete-container {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #ddd;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+#form-section .autocomplete-container > div {
+  padding: 10px;
+  cursor: pointer;
+}
+#form-section .autocomplete-container > div > div:hover {
+  background-color: #f1f1f1;
+}
+#form-section .flag {
+  width: 20px;
+  height: 15px;
+}
+#form-section .icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 567px) {
+  #form-section .icons {
+    justify-content: space-around;
+  }
+}
+#form-section .icons .icon {
+  margin: 0.5rem 0;
+  background-color: #000;
+  color: #fff;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+#form-section .icons .icon:hover {
+  background-color: #fff;
+  color: #000;
+}
+#form-section .icons .icon svg {
+  font-size: 1.5rem;
+}
+#form-section .icons .icon p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#footer ul a {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+#footer ul a:hover {
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */

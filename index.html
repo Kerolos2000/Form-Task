@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Form Task">
+  <link rel="shortcut icon" href="./img/book-solid (1).svg">
+  <title>Form Task</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- main css file -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body id="index">
+
+  <!-- Navbar section -->
+  <nav>
+    <div class="logo"><a href="#">Logo</a></div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+
+  <!-- form section -->
+  <section id="form-section">
+    <div class="container">
+      <form>
+        <div class="row py-3">
+          <div class="mb-3 col-md-6">
+            <label for="FormControlInput1">Destination</label>
+            <input type="text" class="form-control" id="FormControlInput1" name="Destination" placeholder="Destination">
+            <div id="autocomplete-container1" class="autocomplete-container"></div>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="FormControlInput2">Hotel Name</label>
+            <input type="text" class="form-control" id="FormControlInput2" name="Hotel-Name" placeholder="Hotel Name">
+          </div>
+
+          <div class="mb-3 col-md-3">
+            <label for="FormControlInput3">check in</label>
+            <input type="date" class="form-control" id="FormControlInput3" name="from-date" placeholder="check in">
+          </div>
+          <div class="mb-3 col-md-3">
+            <label for="FormControlInput4">check out</label>
+            <input type="date" class="form-control" id="FormControlInput4" name="to-date" placeholder="check out">
+          </div>
+
+          <div class="mb-3 col-md-2">
+            <label for="FormControlInput5">Nights</label>
+            <select class="form-control" id="FormControlInput5">
+              <option selected>Nights</option>
+            </select>
+          </div>
+
+          <div class="mb-3 col-md-4">
+            <label for="FormControlInput6">Travellers</label>
+            <select class="form-control" id="FormControlInput6">
+              <option selected>Travellers</option>
+              <option selected>one room</option>
+              <option selected>two room</option>
+              <option selected>three room</option>
+              <option selected>four room</option>
+              <option selected>five room</option>
+            </select>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="FormControlInput1">Nationality</label>
+            <input type="text" class="form-control" id="FormControlInput7" name="Nationality" placeholder="Nationality">
+            <div id="autocomplete-container2" class="autocomplete-container"></div>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="FormControlInput1">Star Rating</label>
+            <div class="mt-2">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between flex-wrap">
+            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#exampleModal">More
+              Options</button>
+            <div class="btn btn-dark my-1">Search</div>
+          </div>
+
+        </div>
+      </form>
+      <div class="icons">
+        <div class="icon">
+          <i class="fa-solid fa-plane"></i>
+          <p>Flights</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-hotel"></i>
+          <p>Hotels</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-right-left"></i>
+          <p>Transfers</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-t"></i>
+          <p>Tours</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-palette"></i>
+          <p>Activity</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-handshake"></i>
+          <p>Meet & Greet</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-briefcase"></i>
+          <p>Packages</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-note-sticky"></i>
+          <p>Online Request</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">More Option</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row">
+
+          <div class="mb-3 col-md-4">
+            <label for="FormControlInput6">Travellers</label>
+            <select class="form-control" id="FormControlInput6">
+              <option selected>Travellers</option>
+              <option selected>one room</option>
+              <option selected>two room</option>
+              <option selected>three room</option>
+              <option selected>four room</option>
+              <option selected>five room</option>
+            </select>
+          </div>
+
+          <div class="mb-3 col-md-4">
+            <label for="FormControlInput6">Travellers</label>
+            <select class="form-control" id="FormControlInput6">
+              <option selected>Travellers</option>
+              <option selected>one room</option>
+              <option selected>two room</option>
+              <option selected>three room</option>
+              <option selected>four room</option>
+              <option selected>five room</option>
+            </select>
+          </div>
+
+          <div class="mb-3 col-md-4">
+            <label for="FormControlInput6">Travellers</label>
+            <select class="form-control" id="FormControlInput6">
+              <option selected>Travellers</option>
+              <option selected>one room</option>
+              <option selected>two room</option>
+              <option selected>three room</option>
+              <option selected>four room</option>
+              <option selected>five room</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- footer section -->
+  <footer id="footer" class="bg-body-tertiary">
+    <div class="container text-center text-xl-start pt-5 pb-5">
+      <div class="row">
+        <div class="col-xl-4 left-sec">
+          <h2>form Task</h2>
+          <p class="mt-4 paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsum minima eligendi?
+            Consectetur iure numquam minima omnis, ad nihil quos!</p>
+          <p class="paragraph">Created By <span>kerolos</span></p>
+          <p class="paragraph">© 2023 -<span>kerolos</span></p>
+        </div>
+        <div class="col-xl-2 med-sec">
+          <div class="links">
+            <h5 class="fw-bold">Links</h5>
+            <ul class="lh-lg list-unstyled">
+              <a href="#main">
+                <li>Home</li>
+              </a>
+              <a href="#good">
+                <li>Our Services</li>
+              </a>
+              <a href="#make">
+                <li>Portfolio</li>
+              </a>
+              <a href="#Stuff">
+                <li>Testimonials</li>
+              </a>
+              <a href="#Read">
+                <li>Support</li>
+              </a>
+              <a href="#Subscribe">
+                <li>Terms and Condition</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-2 med-sec">
+          <h5 class="fw-bold">About Us</h5>
+          <ul class="lh-lg list-unstyled">
+            <a href="index.html">
+              <li>Sign In</li>
+            </a>
+            <a href="index.html">
+              <li>Register</li>
+            </a>
+            <a href="index.html">
+              <li>About Us</li>
+            </a>
+            <a href="index.html">
+              <li>Blog</li>
+            </a>
+            <a href="index.html">
+              <li>Contact Us</li>
+            </a>
+          </ul>
+        </div>
+        <div class="col-xl-4 left-sec">
+          <h5 class="fw-bold">Contact Us</h5>
+          <p class="mt-4">Get in touch with us via mail phone.We are waiting for your call or message</p>
+          <a href="index.html" class="btn btn-dark rounded-pill mt-2 mb-2 w-100">kerolos1410@gmail.com</a>
+          <ul class="d-flex mt-4 list-unstyled gap-4">
+            <a href="index.html"><i class="fa-brands fa-facebook"></i></a>
+            <a href="index.html"><i class="fa-brands fa-twitter"></i></a>
+            <a href="index.html"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="index.html"><i class="fa-brands fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- font awesome -->
+  <script src="js/all.min.js"></script>
+  <!-- jquery -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
